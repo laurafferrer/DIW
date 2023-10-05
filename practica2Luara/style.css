@@ -1,0 +1,86 @@
+body {
+    background-image: url(./back.jpeg);
+    margin: 0;
+    padding: 0;
+}
+
+.titulo {
+    color: white;
+    background-color: #6c83ac63;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+
+.titulo > h1 {
+    font-size: 350%;
+}
+
+h4 {
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 20px;
+    position: relative;
+    background-color: #6c83ac63;
+}
+
+
+.personaje {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilo para el footer */
+footer {
+    background-color: #6c83ac63; /* Cambia el color de fondo a tu preferencia */
+    color: white; /* Cambia el color del texto a tu preferencia */
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo para el título en el footer */
+footer .tituloFooter h1 {
+    margin: 0;
+}
+
+/* Estilo para los elementos de personaje en el footer */
+footer .personajeFooter {
+    display: flex;
+    justify-content: center;
+}
+
+footer .itemFooter {
+    margin: 0 20px; /* Espacio entre los elementos de personaje */
+}
+
+footer img {
+    max-width: 100px; /* Ajusta el ancho máximo de las imágenes a tu preferencia */
+}
+
+footer h4 {
+    margin-top: 5px;
+}
+
+
