@@ -1,0 +1,13 @@
+#contenedor {
+    /*display: flex;*/
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.caja {
+    float: left;
+    padding: 15px;
+    margin: 10px;
+    border: 5px solid black;
+    background-color: aqua;
+}
