@@ -1,0 +1,55 @@
+body {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.caja {
+
+}
+
+.layout{
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+    height: 650px;
+    width: 700px;
+    /*número columnas*/
+    grid-template-columns: repeat(3, 1fr);
+    /*número filas*/
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    "azul azul"
+    "verde roja"
+    "verde roja"
+    "amarilla amarilla";
+}
+
+.amarilla {
+    grid-area: amarilla;
+    /*grid-row-start: 1;
+    grid-row-end: 3;*/
+    background-color: rgb(255, 191, 0);
+}
+
+.azul {
+    grid-area: azul;
+    /*grid-row: 6;
+    grid-column: 1 / 5;*/
+    background-color: rgb(42, 96, 153);
+}
+
+.roja {
+    grid-area: roja;
+    /*grid-column: 2;
+    grid-row-start: 4;
+    grid-row-end: 6;*/
+    background-color: rgb(255, 0, 0);
+}
+
+
+.verde {
+    grid-area: verde;
+    /*grid-row-start: 4;
+    grid-row-end: 6;*/
+    background-color: rgb(0, 169, 51);
+}
