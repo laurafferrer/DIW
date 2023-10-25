@@ -2,7 +2,6 @@ $primary-bg-color: rgb(114, 113, 113);
 $secondary-bg-color: rgb(145, 244, 165);
 $border-color: rgba(0, 0, 0, 0.2);
 
-/* Establece estilos iniciales para el cuerpo de la página */
 body {
     margin: 0;
     padding: 0;
@@ -13,7 +12,6 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
 
-    /* Anidación para el encabezado */
     header {
         display: grid;
         grid-template-columns: 1fr auto;
@@ -22,26 +20,22 @@ body {
         padding: 20px 0;
         border-bottom: 1px solid #ddd;
 
-        /* Anidación para el logotipo en el encabezado */
         .logo {
             font-weight: bold;
             font-style: italic;
             margin-left: 20px;
         }
 
-        /* Anidación para la navegación en el encabezado */
         nav {
             display: flex;
             align-items: center;
             justify-content: flex-end;
             margin-right: 20px;
 
-            /* Anidación para la lista no ordenada en la navegación */
             ul {
                 list-style: none;
                 display: flex;
 
-                /* Anidación para los elementos de la lista en la navegación */
                 li {
                     margin-left: 20px;
                 }
@@ -49,12 +43,10 @@ body {
         }
     }
 
-    /* Anidación para el contenido principal de la página */
     .content {
         display: grid;
         grid-template-columns: 20% 1fr;
 
-        /* Anidación para la barra lateral en el contenido */
         aside .sidebar {
             display: flex;
             flex-direction: column;
@@ -62,7 +54,6 @@ body {
             position: relative;
             top: 1.5rem;
 
-            /* Anidación para el título en la barra lateral */
             .title {
                 display: block;
                 margin-left: 25px;
@@ -72,7 +63,6 @@ body {
                 white-space: nowrap;
             }
 
-            /* Anidación para la lista no ordenada en la barra lateral */
             ul {
                 list-style: none;
                 padding: 10px;
@@ -80,11 +70,9 @@ body {
                 display: flex;
                 flex-direction: column;
 
-                /* Anidación para los elementos de la lista en la barra lateral */
                 li {
                     padding: 10px;
 
-                    /* Anidación para los botones dentro de la lista en la barra lateral */
                     button {
                         background-color: $secondary-bg-color;
                         padding: 15px 20px;
@@ -95,38 +83,9 @@ body {
                 }
             }
         }
-
-        /* Anidación para el contenedor principal en el contenido */
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-
-            /* Anidación para las tarjetas dentro del contenedor */
-            .card {
-                background-color: $secondary-bg-color;
-                border: 1px solid #000000;
-                margin-bottom: 10px;
-                padding: 0;
-                width: 250px;
-
-                /* Anidación para las imágenes dentro de las tarjetas */
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-
-                /* Anidación para el texto dentro de las tarjetas */
-                p {
-                    opacity: 0.6;
-                }
-            }
-        }
     }
 }
 
-/* Establece estilos para el pie de página */
 footer {
     h1 {
         font-style: italic;

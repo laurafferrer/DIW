@@ -1,5 +1,3 @@
-@charset "UTF-8";
-/* Establece estilos iniciales para el cuerpo de la página */
 body {
   margin: 0;
   padding: 0;
@@ -9,8 +7,6 @@ body {
   background-color: rgb(114, 113, 113);
   display: grid;
   grid-template-rows: auto 1fr auto;
-  /* Anidación para el encabezado */
-  /* Anidación para el contenido principal de la página */
 }
 body header {
   display: grid;
@@ -19,8 +15,6 @@ body header {
   align-items: center;
   padding: 20px 0;
   border-bottom: 1px solid #ddd;
-  /* Anidación para el logotipo en el encabezado */
-  /* Anidación para la navegación en el encabezado */
 }
 body header .logo {
   font-weight: bold;
@@ -32,12 +26,10 @@ body header nav {
   align-items: center;
   justify-content: flex-end;
   margin-right: 20px;
-  /* Anidación para la lista no ordenada en la navegación */
 }
 body header nav ul {
   list-style: none;
   display: flex;
-  /* Anidación para los elementos de la lista en la navegación */
 }
 body header nav ul li {
   margin-left: 20px;
@@ -45,8 +37,6 @@ body header nav ul li {
 body .content {
   display: grid;
   grid-template-columns: 20% 1fr;
-  /* Anidación para la barra lateral en el contenido */
-  /* Anidación para el contenedor principal en el contenido */
 }
 body .content aside .sidebar {
   display: flex;
@@ -54,8 +44,6 @@ body .content aside .sidebar {
   background-color: rgb(114, 113, 113);
   position: relative;
   top: 1.5rem;
-  /* Anidación para el título en la barra lateral */
-  /* Anidación para la lista no ordenada en la barra lateral */
 }
 body .content aside .sidebar .title {
   display: block;
@@ -71,11 +59,9 @@ body .content aside .sidebar ul {
   margin: 10px;
   display: flex;
   flex-direction: column;
-  /* Anidación para los elementos de la lista en la barra lateral */
 }
 body .content aside .sidebar ul li {
   padding: 10px;
-  /* Anidación para los botones dentro de la lista en la barra lateral */
 }
 body .content aside .sidebar ul li button {
   background-color: rgb(145, 244, 165);
@@ -84,31 +70,7 @@ body .content aside .sidebar ul li button {
   width: 12rem;
   border-color: rgba(0, 0, 0, 0.2);
 }
-body .content .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  /* Anidación para las tarjetas dentro del contenedor */
-}
-body .content .container .card {
-  background-color: rgb(145, 244, 165);
-  border: 1px solid #000000;
-  margin-bottom: 10px;
-  padding: 0;
-  width: 250px;
-  /* Anidación para las imágenes dentro de las tarjetas */
-  /* Anidación para el texto dentro de las tarjetas */
-}
-body .content .container .card img {
-  width: 100%;
-  height: auto;
-}
-body .content .container .card p {
-  opacity: 0.6;
-}
 
-/* Establece estilos para el pie de página */
 footer h1 {
   font-style: italic;
   opacity: 0.6;
