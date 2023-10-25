@@ -1,74 +1,161 @@
-// Mixin sin parámetros
-@mixin center-contents {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  // Mixin con parámetros
-  @mixin card-styles($width, $height) {
-    flex-basis: $width;
-    background-color: white;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    width: $width;
-    height: $height;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
-  }
-  
-  header {
-    @include center-contents; // Aplicar el mixin sin parámetros
-  
-    .logo {
-      font-weight: bold;
-      font-style: italic;
-      margin-left: 20px;
-    }
-  
-    nav {
-      display: flex;
-      align-items: center;
-      margin-right: 20px;
-  
-      ul {
-        list-style: none;
-        display: flex;
-      }
-    }
-  }
-  
-  .content {
-    display: flex;
-    align-items: flex-start;
-  
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space between;
-      padding: 20px;
-      margin-left: 20%;
-      width: 80%;
-  
-      .card {
-        @include card-styles(250px, 250px); // Aplicar el mixin con parámetros
-      }
-    }
-  }
-  
-  footer {
-    h1 {
-      font-style: italic;
-      opacity: 0.6;
-      margin-left: 20px;
-      margin-top: 90px;
-    }
-  }
-  
+// Variables
+$color-fondo: white;
+$color-borde: #ddd;
+$color-fuente: Arial, Helvetica, sans-serif;
+$color-botones: lightgray;
+
+$espaciado: 20px;
+
+$tamano-logo: 20px;
+$tamano-titulo: 24px;
+$tamano-tarjeta: 250px;
+
+$alto-botones: 3rem;
+$ancho-botones: 12rem;
+
+$opacidad-texto: 0.6;
+
+$margen-logo: 20px;
+$margen-tarjetas: 10px;
+$margen-boton: 10px;
+
+$flex-direccion: column;
+
+// Función para sombra
+@function boxShadow($offsetX, $offsetY, $blur) {
+  @return "box-shadow: $offsetX $offsetY $blur rgba(0, 0, 0, 0.2);";
+}
+
+.box {
+  box-shadow: boxShadow(0px, 0px, 10px);
+}
+
+// Función para sombra de texto
+@function textShadow($color, $offsetX, $offsetY, $blur) {
+  @return "text-shadow: $offsetX $offsetY $blur $color;";
+}
+
+.text {
+  text-shadow: textShadow(#000, 0px, 0px, 10px);
+}
+
+
+// Estilos CSS
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: $color-fuente;
+  background-color: $color-fondo;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: $espaciado 0;
+  border-bottom: 1px solid $color-borde;
+}
+
+.logo {
+  font-weight: bold;
+  font-style: italic;
+  margin-left: $margen-logo;
+  font-size: $tamano-logo;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: $margen-logo;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin-left: $margen-logo;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  align-items: flex-start;
+}
+
+aside .sidebar {
+  display: flex;
+  flex-direction: $flex-direccion;
+  background-color: $color-fondo;
+  position: relative;
+  top: 1.5rem;
+}
+
+.title {
+  display: block;
+  margin-left: $margen-logo;
+  font-size: $tamano-titulo;
+  width: 62%;
+  border-bottom: 1px solid $color-borde;
+  white-space: nowrap;
+}
+
+ul {
+  list-style: none;
+  padding: $espaciado;
+  margin: $espaciado;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  padding: $espaciado;
+}
+
+button {
+  background-color: $color-botones;
+  padding: 15px 20px;
+  height: $alto-botones;
+  width: $ancho-botones;
+  border-color: rgba(0, 0, 0, 0.2);
+  @include boxShadow(0, 2px, 4px);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $espaciado;
+  padding: $espaciado;
+}
+
+.card {
+  background-color: $color-fondo;
+  border: 1px solid $color-borde;
+  margin-bottom: $margen-tarjetas;
+  padding: 0;
+  width: $tamano-tarjeta;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+p {
+  opacity: $opacidad-texto;
+  @include textShadow(#333, 2px, 2px, 4px);
+}
+
+footer h1 {
+  font-style: italic;
+  opacity: $opacidad-texto;
+  margin-left: $margen-logo;
+  margin-top: $espaciado;
+}

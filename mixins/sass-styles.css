@@ -1,58 +1,17 @@
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: white;
-}
+/* Error: Undefined mixin.
+ *     ,
+ * 128 |   @include boxShadow(0, 2px, 4px);
+ *     |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *     '
+ *   sass-styles.scss 128:3  root stylesheet */
 
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a     \2577 \a 128 \2502    @include boxShadow(0, 2px, 4px);\d\a     \2502    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a     \2575 \a   sass-styles.scss 128:3  root stylesheet";
 }
-header .logo {
-  font-weight: bold;
-  font-style: italic;
-  margin-left: 20px;
-}
-header nav {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-}
-header nav ul {
-  list-style: none;
-  display: flex;
-}
-
-.content {
-  display: flex;
-  align-items: flex-start;
-}
-.content .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space between;
-  padding: 20px;
-  margin-left: 20%;
-  width: 80%;
-}
-.content .container .card {
-  flex-basis: 250px;
-  background-color: white;
-  border: 1px solid #ddd;
-  margin-bottom: 10px;
-  width: 250px;
-  height: 250px;
-}
-
-footer h1 {
-  font-style: italic;
-  opacity: 0.6;
-  margin-left: 20px;
-  margin-top: 90px;
-}
-
-/*# sourceMappingURL=sass-styles.css.map */
