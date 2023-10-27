@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+body header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+body header .logo {
+  font-weight: bold;
+  font-style: italic;
+  margin-left: 20px;
+  font-size: 20px;
+}
+body header nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+body header nav ul {
+  list-style: none;
+  display: flex;
+}
+body header nav ul li {
+  margin-left: 20px;
+}
+body .content {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  align-items: flex-start;
+}
+body .content aside .sidebar {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 1.5rem;
+}
+body .content aside .sidebar .title {
+  display: block;
+  margin-left: 20px;
+  font-size: 24px;
+  width: 62%;
+  border-bottom: 1px solid #000000;
+  white-space: nowrap;
+}
+body .content aside .sidebar ul {
+  list-style: none;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+body .content aside .sidebar ul li {
+  padding: 20px;
+}
+body .content aside .sidebar ul li button {
+  padding: 15px 20px;
+  height: 3rem;
+  width: 12rem;
+  color: rgba(140, 0, 255, 0.652);
+  box-shadow: 0 2px 4px rgba(140, 0, 255, 0.652);
+}
+body .content .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+body .content .container .card {
+  margin-bottom: 10px;
+  padding: 0;
+  width: 250px;
+  border: 1px solid #000000;
+}
+body .content .container .card img {
+  width: 100%;
+  height: auto;
+}
+body .content .container .card p {
+  opacity: 0.6;
+  text-shadow: rgba(123, 0, 255, 0.5529411765) 2px 2px 4px;
+}
+body footer h1 {
+  font-style: italic;
+  opacity: 0.6;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=sass-styles.css.map */

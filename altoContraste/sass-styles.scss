@@ -1,0 +1,148 @@
+@import 'color-normal';
+//@import 'color-contraste';
+
+// Variables
+$espaciado: 20px; // Espaciado general
+
+$tamano-logo: 20px; // Tamaño de la fuente del logo
+$tamano-titulo: 24px; // Tamaño de la fuente para títulos
+$tamano-tarjeta: 250px; // Tamaño de las tarjetas
+
+$alto-botones: 3rem; // Alto de los botones
+$ancho-botones: 12rem; // Ancho de los botones
+
+$opacidad-texto: 0.6; // Opacidad del texto
+
+$margen-logo: 20px; // Márgenes del logo
+$margen-tarjetas: 10px; // Márgenes de las tarjetas
+$margen-boton: 10px; // Márgenes de los botones
+
+$flex-direccion: column; // Dirección del flexbox
+
+// Mixin sin parámetros para sombra
+@mixin boxShadow {
+  box-shadow: 0 2px 4px $color-boxshadow; // Estilo de sombra de caja
+}
+
+// Mixin con parámetros para sombra de texto
+@mixin textShadow($color, $offsetX, $offsetY, $blur) {
+  text-shadow: $color $offsetX $offsetY $blur; // Estilo de sombra de texto
+}
+
+// Estilos CSS
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: $espaciado 0; // Espaciado del encabezado
+
+    .logo {
+      font-weight: bold;
+      font-style: italic;
+      margin-left: $margen-logo; // Márgenes del logo
+      font-size: $tamano-logo; // Tamaño de la fuente del logo
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-right: $margen-logo; // Márgenes del menú de navegación
+
+      ul {
+        list-style: none;
+        display: flex;
+
+        li {
+          margin-left: $margen-logo; // Márgenes de los elementos del menú
+        }
+      }
+    }
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    align-items: flex-start;
+
+    aside .sidebar {
+      display: flex;
+      flex-direction: $flex-direccion; // Dirección del flexbox de la barra lateral
+      position: relative;
+      top: 1.5rem; // Desplazamiento hacia arriba
+
+      .title {
+        display: block;
+        margin-left: $margen-logo; // Márgenes del título de la barra lateral
+        font-size: $tamano-titulo; // Tamaño de la fuente del título
+        width: 62%;
+        border-bottom: 1px solid $color-borde;;
+        white-space: nowrap;
+      }
+
+      ul {
+        list-style: none;
+        padding: $espaciado;
+        margin: $espaciado;
+        display: flex;
+        flex-direction: column;
+
+        li {
+          padding: $espaciado;
+
+          button {
+            padding: 15px 20px;
+            height: $alto-botones; // Alto de los botones
+            width: $ancho-botones; // Ancho de los botones
+            color: $border-botones;
+
+            @include boxShadow;
+          }
+        }
+      }
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: $espaciado; // Espaciado entre elementos
+      padding: $espaciado;
+
+      .card {
+        margin-bottom: $margen-tarjetas; // Márgenes de las tarjetas
+        padding: 0;
+        width: $tamano-tarjeta; // Tamaño de las tarjetas
+        border: 1px solid $color-borde;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        p {
+          opacity: $opacidad-texto; // Opacidad del texto
+
+          // Uso del mixin con parámetros
+          @include textShadow($sombra, 2px, 2px, 4px);
+        }
+      }
+    }
+  }
+
+  footer h1 {
+    font-style: italic; // Estilo de fuente en el pie de página
+    opacity: $opacidad-texto; // Opacidad del texto en el pie de página
+    margin-left: $margen-logo; // Márgenes en el pie de página
+    margin-top: $espaciado;
+  }
+}
