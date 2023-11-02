@@ -1,0 +1,8 @@
+@use 'comun';
+@use 'contraste';
+@use 'normal';
+
+h1 {
+    font-family: comun.$tipografia;
+    @include normal.pintaH1;
+}

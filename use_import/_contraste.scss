@@ -1,0 +1,7 @@
+$color_texto_h1: yellow;
+$color_fondo_h1: black;
+
+@mixin pintaH1{
+    color: $color_texto_h1;
+    background-color: $color_fondo_h1;
+}
