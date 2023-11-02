@@ -1,13 +1,81 @@
 // Variables
 $color-texto: rgb(0, 0, 0);
 
-$color-fondo: rgba(255, 255, 255, 0.461);        // Color de fondo
-$color-borde: #000000;         // Color del borde
+$color-fondo: rgba(255, 255, 255, 0.461); // Color de fondo
+$color-borde: #000000; // Color del borde
 $color-fuente: Arial, Helvetica, sans-serif; // Fuente
-$color-botones: rgba(0, 0, 0, 0.394);  // Color de fondo de los botones
+$color-botones: rgba(0, 0, 0, 0.394); // Color de fondo de los botones
 
 $color-boxshadow: rgba(140, 0, 255, 0.652);
 
 $border-botones: rgba(140, 0, 255, 0.652);
 
 $sombra: #7b00ff8d;
+
+@mixin makeHeaderNormal {
+    body {
+        background-color: $color-fondo;
+
+        header {
+
+            .logo {
+                color: $color-texto;
+            }
+
+            nav {
+
+                ul {
+
+                    li {
+                        color: $color-texto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin contenidoCardsNormal {
+
+    .content {
+
+        aside .sidebar {
+
+            .title {
+                color: $color-texto;
+                border-bottom: 1px solid $color-borde;
+            }
+
+            ul {
+
+                li {
+
+                    button {
+                        background-color: $color-botones;
+                        color: $border-botones;
+                        box-shadow: 0 2px 4px $color-boxshadow; // Estilo de sombra de caja
+                    }
+                }
+            }
+        }
+
+        .container {
+
+            .card {
+                color: $color-texto;
+                border: 1px solid $color-borde;
+
+                p {
+                    text-shadow: $sombra, 2px, 2px, 4px;
+                }
+            }
+        }
+    }
+
+}
+
+@mixin makeFooterNormal {
+    footer h1 {
+        color: $color-texto;
+    }
+}

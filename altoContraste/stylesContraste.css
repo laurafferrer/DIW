@@ -5,7 +5,6 @@ body {
   height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background-color: black;
 }
 body header {
   display: grid;
@@ -17,7 +16,6 @@ body header {
 body header .logo {
   font-weight: bold;
   font-style: italic;
-  color: yellow;
   margin-left: 20px;
   font-size: 20px;
 }
@@ -32,74 +30,97 @@ body header nav ul {
   display: flex;
 }
 body header nav ul li {
-  color: yellow;
   margin-left: 20px;
 }
-body .content {
+
+.content {
   display: grid;
   grid-template-columns: 20% 1fr;
   align-items: flex-start;
 }
-body .content aside .sidebar {
+.content aside .sidebar {
   display: flex;
   flex-direction: column;
   position: relative;
   top: 1.5rem;
 }
-body .content aside .sidebar .title {
+.content aside .sidebar .title {
   display: block;
-  color: yellow;
   margin-left: 20px;
   font-size: 24px;
   width: 62%;
-  border-bottom: 1px solid yellow;
   white-space: nowrap;
 }
-body .content aside .sidebar ul {
+.content aside .sidebar ul {
   list-style: none;
   padding: 20px;
   margin: 20px;
   display: flex;
   flex-direction: column;
 }
-body .content aside .sidebar ul li {
+.content aside .sidebar ul li {
   padding: 20px;
 }
-body .content aside .sidebar ul li button {
-  background-color: black;
+.content aside .sidebar ul li button {
   padding: 15px 20px;
   height: 3rem;
   width: 12rem;
-  color: yellow;
-  box-shadow: 0 2px 4px yellow;
 }
-body .content .container {
+.content .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding: 20px;
 }
-body .content .container .card {
-  color: yellow;
+.content .container .card {
   margin-bottom: 10px;
   padding: 0;
   width: 250px;
-  border: 1px solid yellow;
 }
-body .content .container .card img {
+.content .container .card img {
   width: 100%;
   height: auto;
 }
-body .content .container .card p {
+.content .container .card p {
   opacity: 0.6;
-  text-shadow: yellow 2px 2px 4px;
 }
-body footer h1 {
+
+footer h1 {
   font-style: italic;
-  color: yellow;
   opacity: 0.6;
   margin-left: 20px;
   margin-top: 20px;
 }
 
-/*# sourceMappingURL=sass-styles.css.map */
+body {
+  background-color: black;
+}
+body header .logo {
+  color: yellow;
+}
+body header nav ul li {
+  color: yellow;
+}
+
+.content aside .sidebar .title {
+  color: yellow;
+  border-bottom: 1px solid yellow;
+}
+.content aside .sidebar ul li button {
+  background-color: black;
+  color: yellow;
+  box-shadow: 0 2px 4px yellow;
+}
+.content .container .card {
+  color: yellow;
+  border: 1px solid yellow;
+}
+.content .container .card p {
+  text-shadow: yellow, 2px, 2px, 4px;
+}
+
+footer h1 {
+  color: yellow;
+}
+
+/*# sourceMappingURL=stylesContraste.css.map */
