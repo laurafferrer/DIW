@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTAFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<nav class="navbar" role="navigation" aria-label="main navegation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+            <img src="?" alt="Logo">
+            PORTAFOLIO
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="#">
+                INICIO
+            </a>
+
+            <a class="navbar-item" href="#">
+                PROYECTOS
+            </a>
+
+            <a class="navbar-item" href="#">
+                BLOG
+            </a>
+
+            <a class="navbar-item" href="#">
+                CONTACTO
+            </a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    $(document).ready(function() {
+        var $navbarBurger = $('.navbar-burger');
+        var $navbarMenu = $('#navbarBasicExample');
+
+        $navbarBurger.click(function() {
+            $navbarBurger.toggleClass('is-active');
+            $navbarMenu.toggleClass('is-active');
+        });
+    });
+</script>
+
+
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>PORTAFOLIO</h1>
+        </div>
+        <nav>
+            <ul>
+                <li>INICIO</li>
+                <li>PROYECTOS</li>
+                <li>BLOG</li>
+                <li>CONTACTO</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <aside>
+            <div class="sidebar">
+                <div class="title">
+                    <p>¿Qué quieres ver?</p>
+                </div>
+                <ul>
+                    <li><button>WEBS</button></li>
+                    <li><button>APPS</button></li>
+                    <li><button>DISEÑOS</button></li>
+                    <li><button>OTROS</button></li>
+                </ul>
+            </div>
+        </aside>
+        <div class="container">
+            <div class="card">
+                <img src="./griddd.jpg" alt="Proyecto 1">
+                <h4>Nombre del proyecto</h4>
+                <p>Sitio web</p>
+            </div>
+            <div class="card">
+                <img src="./griddd.jpg" alt="Proyecto 1">
+                <h4>Nombre del proyecto</h4>
+                <p>Sitio web</p>
+            </div>
+            <div class="card">
+                <img src="./griddd.jpg" alt="Proyecto 1">
+                <h4>Nombre del proyecto</h4>
+                <p>Sitio web</p>
+            </div>
+            <div class="card">
+                <img src="./griddd.jpg" alt="Proyecto 1">
+                <h4>Nombre del proyecto</h4>
+                <p>Sitio web</p>
+            </div>
+            <div class="card">
+                <img src="./griddd.jpg" alt="Proyecto 1">
+                <h4>Nombre del proyecto</h4>
+                <p>Sitio web</p>
+            </div>
+            <div class="card">
+                <img src="./griddd.jpg" alt="Proyecto 1">
+                <h4>Nombre del proyecto</h4>
+                <p>Sitio web</p>
+            </div>
+            <div class="card">
+                <img src="./griddd.jpg" alt="Proyecto 1">
+                <h4>Nombre del proyecto</h4>
+                <p>Sitio web</p>
+            </div>
+            <div class="card">
+                <img src="./griddd.jpg" alt="Proyecto 1">
+                <h4>Nombre del proyecto</h4>
+                <p>Sitio web</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h1>PORTAFOLIO</h1>
+    </footer>
+</body>
+</html>
