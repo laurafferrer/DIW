@@ -1,55 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTAFOLIO</title>
     <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
-<nav class="navbar" role="navigation" aria-label="main navegation">
+<nav class="navbar is-primary" role="navigation" aria-label="main navegation">
     <div class="navbar-brand">
-        <a class="navbar-item" href="#">
+        <a class="navbar-item has-text-black" href="#">
             <img src="./Pepsilogo.png" alt="Logo">
             PORTAFOLIO
         </a>
 
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarId">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
         </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start float-right">
-            <a class="navbar-item" href="#">
+    <div id="navbarId" class="navbar-menu">
+        <div class="navbar-end">
+            <a class="navbar-item has-text-black" href="#">
                 INICIO
             </a>
-
-            <a class="navbar-item" href="#">
+            <a class="navbar-item has-text-black" href="#">
                 PROYECTOS
             </a>
-
-            <a class="navbar-item" href="#">
+            <a class="navbar-item has-text-black" href="#">
                 BLOG
             </a>
-
-            <a class="navbar-item" href="#">
-                CONTACTO
-            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link has-text-black">
+                    CONTACTO
+                </a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item has-text-black" href="#">
+                        Teléfono
+                    </a>
+                    <a class="navbar-item has-text-black" href="#">
+                        Correo
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         var $navbarBurger = $('.navbar-burger');
-        var $navbarMenu = $('#navbarBasicExample');
+        var $navbarMenu = $('#navbarId');
 
-        $navbarBurger.click(function() {
+        $navbarBurger.click(function () {
             $navbarBurger.toggleClass('is-active');
             $navbarMenu.toggleClass('is-active');
         });
@@ -120,4 +128,5 @@
         <h1>PORTAFOLIO</h1>
     </footer>
 </body>
+
 </html>
