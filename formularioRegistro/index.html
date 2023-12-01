@@ -8,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="./script.js"></script>
     <link rel="stylesheet" href="css/mystyles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 </head>
@@ -88,14 +88,76 @@
                     </a>
                 </div>
             </div>
-            <a class="js-modal-trigger navbar-item has-text-black" data-target="modal-js-example">
+            <a class="js-modal-trigger navbar-item has-text-black" data-target="modal-js-login">
                 LOGIN
+            </a>
+            <a class="js-modal-trigger navbar-item has-text-black" data-target="modal-js-registro">
+                REGISTRO
             </a>
         </div>
     </div>
 </nav>
 
-<div id="modal-js-example" class="modal">
+<div id="modal-js-login" class="modal">
+    <div class="modal-background"></div>
+
+    <div class="modal-content">
+        <div class="box has-background-primary">
+            <h3 class="title has-text-black has-text-centered">LOGIN</h3>
+            <hr class="login-hr">
+            <form>
+                <div class="field ">
+                    <div class="control has-icons-left">
+                        <input class="input is-large is-hovered" type="email" placeholder="email" autofocus="">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control has-icons-left">
+                        <input class="input is-large is-hovered" type="username" placeholder="username">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control has-icons-left">
+                        <input class="input is-large is-hovered" type="password" placeholder="password">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        Recordar
+                    </label>
+                </div>
+                <div class="has-text-centered">
+                    <button class="button is-black is-large">Acceder
+                        <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </form>
+            <br>
+            <div class="has-text-centered">
+                <p class="has-text-grey">
+                    <a href="">Crear cuenta</a> &nbsp;·&nbsp;
+                    <a href="">He olvidado la contraseña</a> &nbsp;·&nbsp;
+                    <a href="">¿Necesita ayuda?</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<div id="modal-js-registro" class="modal">
     <div class="modal-background"></div>
 
     <div class="modal-content">
@@ -136,29 +198,39 @@
                 </div>
                 <div class="field">
                     <p>Elige tu sexo</p>
-                    <div class="control has-icons-left">
-                        <input class="input is-large is-hovered" type="password" placeholder="Introduce tu contraseña">
-                        <span class="icon is-small is-left">
-                            <i class="fas fa-key"></i>
-                        </span>
-                    </div>
-                </div>
-                <div class="field">
                     <div class="select is-primary">
                         <select>
                             <option>Mujer</option>
-                            <option></option>
+                            <option>Hombre</option>
+                            <option>Prefiero no constestar</option>
                         </select>
                     </div>
                 </div>
                 <div class="field">
+                    <p>Cuentame algo</p>
+                    <textarea class="textarea is-primary" placeholder="¿Quieres comentar alguna cosa?"></textarea>
+                </div>
+                <div class="field">
                     <label class="checkbox">
                         <input type="checkbox">
-                        Recordar
+                        Estoy de acuerdo con los terminos y condiciones de uso.
                     </label>
                 </div>
+                <div class="control">
+                    <label class="radio">
+                      <input type="radio" name="answer">
+                      Yes
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="answer">
+                      No
+                    </label>
+                  </div>
                 <div class="has-text-centered">
-                    <button class="button is-black is-large">Acceder
+                    <button class="button is-black is-large">Registrarse
+                        <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    </button>
+                    <button class="button is-black is-large">Cancelar
                         <i class="fa fa-sign-in" aria-hidden="true"></i>
                     </button>
                 </div>
